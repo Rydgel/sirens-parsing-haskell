@@ -1,0 +1,7 @@
+resolver: lts-3.13
+packages:
+- '.'
+extra-deps: []
+rebuild-ghc-options: true
+ghc-options:
+    "sirens-exe": "-threaded -O2 -rtsopts -with-rtsopts=-N -Wall -Werror"
