@@ -11,6 +11,6 @@ main = do
   fileStr <- B.readFile "resources/sirens_fxt.txt"
   let sirens = parseSirens fileStr
   putStrLn "Number of Sirens which are present twice or more: "
-  print $ length $ M.keys . M.filter (>=2) $ sirens
+  print $ M.size $ M.filter (>=2) sirens
   putStrLn "Number of Sirens which are present only once: "
-  print $ length $ M.keys . M.filter (==1) $ sirens
+  print $ M.size $ M.filter (==1) sirens
