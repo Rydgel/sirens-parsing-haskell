@@ -16,11 +16,11 @@ main = do
       it "is not found" $
         M.lookup "9999999999999" sirens `shouldBe` Nothing
     describe "Verify that an existent Sirens" $
-      it "is found with 1 occurence" $
+      it "is found with 1 occurrence" $
         M.lookup "005520242" sirens `shouldBe` Just 1
     describe "Verify that an existent Sirens" $
-      it "is found with 2 occurences" $
+      it "is found with 2 occurrences" $
         M.lookup "005541552" sirens `shouldBe` Just 2
     describe "Verify that an existent Sirens" $
-      it "is found with 32 occurences" $
+      it "is found with 32 occurrences" $
         M.lookup "177501517" sirens `shouldBe` Just 32
