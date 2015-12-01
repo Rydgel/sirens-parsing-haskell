@@ -12,7 +12,7 @@ main = do
   fileStr <- B.readFile "resources/sirens_fxt.txt"
   let sirens = parseSirens fileStr
   hspec $ do
-    describe "Verify that an unexistent Sirens" $
+    describe "Verify that a non existent Sirens" $
       it "is not found" $
         M.lookup "9999999999999" sirens `shouldBe` Nothing
     describe "Verify that an existent Sirens" $
